@@ -12,6 +12,11 @@
     </p>
     <p>{{ test }}</p>
 
+    <h2>prods</h2>
+    <div v-for="edge in $page.products.edges" :key="edge.id">
+      <h2>{{ edge.node.name }}</h2>
+    </div>
+
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener"
         >Gridsome Docs</a
@@ -25,6 +30,20 @@
     </p>
   </Layout>
 </template>
+<page-query>
+query {
+  products: allProduct
+  { edges
+    { node
+      { 
+        id,
+        name
+      } 
+    }
+  }
+
+}
+</page-query>
 
 <script>
 export default {
