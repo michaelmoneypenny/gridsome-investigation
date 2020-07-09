@@ -7,7 +7,7 @@
 const axios = require("axios");
 module.exports = function(api) {
   api.loadSource(async (actions) => {
-    const { data } = await axios.get("http://localhost:7071/api/products");
+    const { data } = await axios.get("/api/products");
     const collection = actions.addCollection("Product");
 
     for (const item of data) {
