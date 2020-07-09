@@ -7,17 +7,16 @@
 const axios = require("axios");
 module.exports = function(api) {
   api.loadSource(async (actions) => {
-    const { data } = await axios.get("/api/products");
-    const collection = actions.addCollection("Product");
-
-    for (const item of data) {
-      collection.addNode({
-        id: item.id,
-        name: item.name,
-        description: item.description,
-        quantity: item.quantity,
-      });
-    }
+    // const { data } = await axios.get("/api/products");
+    // const collection = actions.addCollection("Product");
+    // for (const item of data) {
+    //   collection.addNode({
+    //     id: item.id,
+    //     name: item.name,
+    //     description: item.description,
+    //     quantity: item.quantity,
+    //   });
+    // }
   });
 
   api.createPages(({ createPage }) => {
