@@ -30,20 +30,6 @@
     </p>
   </Layout>
 </template>
-<page-query>
-query {
-  products: allProduct
-  { edges
-    { node
-      { 
-        id,
-        name
-      } 
-    }
-  }
-
-}
-</page-query>
 
 <script>
 export default {
