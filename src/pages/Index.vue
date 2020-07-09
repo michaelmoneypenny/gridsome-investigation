@@ -13,9 +13,9 @@
     <p>{{ test }}</p>
 
     <h2>prods</h2>
-    <div v-for="edge in $page.products.edges" :key="edge.id">
+    <!-- <div v-for="edge in $page.products.edges" :key="edge.id">
       <h2>{{ edge.node.name }}</h2>
-    </div>
+    </div> -->
 
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener"
