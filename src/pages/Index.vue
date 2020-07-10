@@ -13,8 +13,8 @@
     <p>{{ test }}</p>
 
     <h2>prods</h2>
-    <div v-for="edge in $page.products.edges" :key="edge.id">
-      <h2>{{ edge.node.name }}</h2>
+    <div v-for="prod in data" :key="prod.id">
+      <h2>{{ prod.name }}</h2>
     </div>
 
     <p class="home-links">
@@ -30,21 +30,9 @@
     </p>
   </Layout>
 </template>
-<page-query>
-query {
-  products: allProduct
-  { edges
-    { node
-      { 
-        id,
-        name
-      } 
-    }
-  }
 
-}
-</page-query>
 <script>
+const axios = require("axios");
 export default {
   metaInfo: {
     title: "Hello, world!",
@@ -52,7 +40,14 @@ export default {
   data: function() {
     return {
       test: "testy",
+      data: [],
     };
+  },
+  async mounted() {
+    try {
+      const results = await axios.get("/api/products");
+      this.data = results.data;
+    } catch (error) {}
   },
 };
 </script>
