@@ -1,22 +1,28 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <g-image alt="Example image" src="~/mp.png" width="335" />
 
-    <h1>Hello, world!</h1>
+    <h1>Moneypenny Rebuild</h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-      excepturi labore tempore expedita, et iste tenetur suscipit explicabo!
-      Dolores, aperiam non officia eos quod asperiores
+      A prototype of vue-driven static site generation and azure static web apps
     </p>
-    <p>{{ test }}</p>
 
-    <h2>prods</h2>
+    <h2>Services (this comes from an integrated azure function)</h2>
     <div v-for="prod in data" :key="prod.id">
-      <h2>{{ prod.name }}</h2>
+      <p>{{ prod.name }}</p>
+
+      <span
+        ><em>{{ prod.description }}</em></span
+      >
+      <hr />
     </div>
 
+    <h2>Perks (this comes from local json + graphql layer)</h2>
+    <div v-for="edge in $page.perks.edges" :key="edge.node.id">
+      <p>{{ edge.node.perk }}</p>
+    </div>
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener"
         >Gridsome Docs</a
@@ -30,7 +36,18 @@
     </p>
   </Layout>
 </template>
-
+<page-query>
+query {
+  perks: allPerks {
+    edges {
+      node {
+        id
+        perk
+      }
+    }
+  }
+}
+</page-query>
 <script>
 const axios = require("axios");
 export default {
@@ -41,6 +58,7 @@ export default {
     return {
       test: "testy",
       data: [],
+      perks: [],
     };
   },
   async mounted() {
@@ -55,5 +73,8 @@ export default {
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+p {
+  font-weight: bold;
 }
 </style>
