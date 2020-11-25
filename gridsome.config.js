@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: "Moneypenny",
+  pathPrefix: "/uk",
   plugins: [
     {
       use: "@gridsome/plugin-critical",
