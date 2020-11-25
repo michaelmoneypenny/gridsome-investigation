@@ -7,14 +7,5 @@
 module.exports = {
   siteName: "Moneypenny",
   pathPrefix: "/uk",
-  plugins: [
-    {
-      use: "@gridsome/plugin-critical",
-      options: {
-        paths: ["/"],
-        width: 1920,
-        height: 1080,
-      },
-    },
-  ],
+  plugins: [],
 };
