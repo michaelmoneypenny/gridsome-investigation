@@ -1,5 +1,9 @@
 {
-  "route": "/",
-  "serve": "/uk",
-  "statusCode": 301
+  "routes": [
+    {
+      "route": "/",
+      "serve": "/uk",
+      "statusCode": 301
+    }
+  ]
 }
