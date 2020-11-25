@@ -1,8 +1,8 @@
 {
   "routes": [
     {
-      "route": "/",
-      "serve": "/uk",
+      "route": "/uk",
+      "serve": "/",
       "statusCode": 301
     }
   ]
