@@ -6,6 +6,5 @@
 
 module.exports = {
   siteName: "Moneypenny",
-  pathPrefix: '/uk',
   plugins: [],
 };
