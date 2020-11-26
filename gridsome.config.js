@@ -7,4 +7,6 @@
 module.exports = {
   siteName: "Moneypenny",
   plugins: [],
+  pathPrefix: "/uk",
+  outputDir: "/uk",
 };
