@@ -7,4 +7,4 @@ dist
 uk
 .env
 .env.*
-publish/app
+publish/uk
