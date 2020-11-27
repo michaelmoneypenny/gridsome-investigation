@@ -7,14 +7,14 @@
 module.exports = {
   siteName: "Moneypenny",
   plugins: [
-    {
-      use: "@gridsome/plugin-critical",
-      options: {
-        paths: ["/"],
-        width: 1920,
-        height: 1080,
-      },
-    },
+    // {
+    //   use: "@gridsome/plugin-critical",
+    //   options: {
+    //     paths: ["/"],
+    //     width: 1920,
+    //     height: 1080,
+    //   },
+    // },
   ],
   pathPrefix: "/uk",
   outputDir: "/uk",
