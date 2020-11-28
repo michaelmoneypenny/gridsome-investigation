@@ -7,3 +7,4 @@ dist
 uk
 .env
 .env.*
+publish/uk

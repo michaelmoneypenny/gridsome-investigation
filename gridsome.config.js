@@ -17,5 +17,5 @@ module.exports = {
     // },
   ],
   pathPrefix: "/uk",
-  outputDir: "/uk",
+  outputDir: "/publish/uk",
 };
