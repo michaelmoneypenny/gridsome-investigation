@@ -3,11 +3,13 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
+    "testbuild": "set MODE=test&& gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "test": "jest"
   },
   "dependencies": {
+    "@gridsome/plugin-critical": "^0.2.0",
     "axios": "^0.19.2",
     "core-js": "^3.7.0",
     "gridsome": "^0.7.21",

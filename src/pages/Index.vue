@@ -3,7 +3,7 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/mp.png" width="335" />
 
-    <h1>Moneypenny Rebuild</h1>
+    <h1>Moneypenny Rebuild, ENV: {{ env }}</h1>
 
     <p>
       A prototype of vue-driven static site generation and azure static web apps
@@ -59,6 +59,7 @@ export default {
       test: "testy",
       data: [],
       perks: [],
+      env: process.env.GRIDSOME_API_URL,
     };
   },
   async mounted() {
