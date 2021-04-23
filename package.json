@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@gridsome/plugin-critical": "^0.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.7.0",
     "gridsome": "^0.7.21",
     "regenerator-runtime": "^0.13.7"
